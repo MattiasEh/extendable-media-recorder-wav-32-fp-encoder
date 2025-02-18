@@ -23,7 +23,7 @@ export default new Promise((resolve, reject) => {
     compiler.inputFileSystem = {
         readFile(path, ...args) {
             if (path === virtualPath) {
-                args.pop()(null, "import 'extendable-media-recorder-wav-encoder-worker';");
+                args.pop()(null, "import 'extendable-media-recorder-wav-32-fp-encoder-worker';");
 
                 return;
             }

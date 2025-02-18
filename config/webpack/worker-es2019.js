@@ -4,7 +4,7 @@ const { RawSource } = require('webpack-sources');
 
 module.exports = {
     entry: {
-        worker: './node_modules/extendable-media-recorder-wav-encoder-worker/build/es2019/module.js'
+        worker: './node_modules/extendable-media-recorder-wav-32-fp-encoder-worker/build/es2019/module.js'
     },
     mode: 'production',
     module: {
@@ -71,7 +71,7 @@ module.exports = {
                                     compilation.updateAsset(file, (asset) => {
                                         const workerString = asset.source().replace(/\\/g, '\\\\').replace(/\${/g, '\\${');
 
-                                        return new RawSource(`// This is the minified and stringified code of the extendable-media-recorder-wav-encoder-worker package.
+                                        return new RawSource(`// This is the minified and stringified code of the extendable-media-recorder-wav-32-fp-encoder-worker package.
 export const worker = \`${workerString}\`; // tslint:disable-line:max-line-length
 `);
                                     });
